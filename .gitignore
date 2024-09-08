@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.pyo
+*.pyd
+
+# 가상 환경
+venv/
+.env
+.env.*
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# 로그 파일
+*.log
+logs
+
+# Django 특정 캐시 파일
+*.pot
+*.pyc
+
+# Pytest Django
+.cache/
+/.idea/
