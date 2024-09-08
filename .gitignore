@@ -28,10 +28,6 @@ venv/
 *.log
 logs
 
-# Django 특정 캐시 파일
-*.pot
-*.pyc
-
-# Pytest Django
-.cache/
-/.idea/
+# 파일
+input/
+output/

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import koreanize_matplotlib
 
 # JSON 파일 경로
-json_file_path = '../data/games_data_4.json'
+json_file_path = '../../data/games_data_4.json'
 
 # JSON 파일 로드
 with open(json_file_path, 'r', encoding='utf-8') as f:
