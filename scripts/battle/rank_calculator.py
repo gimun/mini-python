@@ -64,6 +64,12 @@ def main():
     # 데이터를 Polars DataFrame으로 변환
     combined_df = pl.DataFrame(all_data)
 
+    # play_count 열이 존재하지 않으면 기본 값 0으로 설정
+    if 'play_count' not in combined_df.columns:
+        combined_df = combined_df.with_columns(
+            pl.Series('play_count', [0] * combined_df.height)
+        )
+
     # status가 1인 member_id 목록 필터링
     active_member_ids = get_active_member_ids()
 
@@ -76,8 +82,17 @@ def main():
         .otherwise(0).alias('rank_score')
     )
 
-    # member_id 별로 그룹화하여 rank_score의 합계 계산
-    grouped_df = combined_df.group_by('member_id').agg(pl.sum('rank_score').alias('rank_score'))
+    # play_count 계산: rank_score가 존재하는 경우 play_count +1
+    combined_df = combined_df.with_columns(
+        pl.when(pl.col('rank_score') > 0).then(pl.col('play_count') + 1)
+        .otherwise(pl.col('play_count')).alias('play_count')
+    )
+
+    # member_id 별로 그룹화하여 rank_score의 합계 및 play_count의 합계 계산
+    grouped_df = combined_df.group_by('member_id').agg([
+        pl.sum('play_count').alias('play_count'),
+        pl.sum('rank_score').alias('rank_score')
+    ])
 
     # 활성 멤버 정보 DataFrame 로드
     active_members_df = load_active_members_as_df()
@@ -87,6 +102,7 @@ def main():
 
     # rank_score가 없거나 NaN인 경우 0으로 설정
     final_df = final_df.with_columns(
+        pl.col('play_count').fill_null(0),
         pl.col('rank_score').fill_null(0)
     )
 
