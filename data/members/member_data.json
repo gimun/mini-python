@@ -2,246 +2,301 @@
   {
     "rank": 1,
     "name": "기무니",
-    "score": 435
+    "role": "대표",
+    "total_score": 234750849
   },
   {
     "rank": 2,
     "name": "주키니콩",
-    "score": 317
+    "role": "부대표",
+    "total_score": 225890038
   },
   {
     "rank": 3,
-    "name": "무명",
-    "score": 294
+    "name": "유디",
+    "role": "부대표",
+    "total_score": 158878657
   },
   {
     "rank": 4,
-    "name": "유디",
-    "score": 268
+    "name": "우리집왕떡이",
+    "role": "부대표",
+    "total_score": 143330883
   },
   {
     "rank": 5,
-    "name": "백현",
-    "score": 262
+    "name": "보석리아",
+    "role": "장로",
+    "total_score": 132948577
   },
   {
     "rank": 6,
-    "name": "충주",
-    "score": 255
+    "name": "졔타몽",
+    "role": "부대표",
+    "total_score": 125566596
   },
   {
     "rank": 7,
-    "name": "디제이",
-    "score": 236
+    "name": "시간부자무직백수",
+    "role": "장로",
+    "total_score": 120391634
   },
   {
     "rank": 8,
-    "name": "우당탕탕",
-    "score": 223
+    "name": "비셩이",
+    "role": "클랜원",
+    "total_score": 118206705
   },
   {
     "rank": 9,
-    "name": "감자깡",
-    "score": 217
+    "name": "도라지공주",
+    "role": "장로",
+    "total_score": 109654894
   },
   {
     "rank": 10,
-    "name": "고양이랑",
-    "score": 213
+    "name": "미동",
+    "role": "장로",
+    "total_score": 102788845
   },
   {
     "rank": 11,
-    "name": "고구마깡",
-    "score": 211
+    "name": "충주",
+    "role": "장로",
+    "total_score": 96008954
   },
   {
     "rank": 12,
-    "name": "예슬쿵야",
-    "score": 207
+    "name": "고구마깡",
+    "role": "장로",
+    "total_score": 95155325
   },
   {
     "rank": 13,
-    "name": "보석리아",
-    "score": 196
+    "name": "비둘기님",
+    "role": "장로",
+    "total_score": 87328349
   },
   {
     "rank": 14,
-    "name": "핑퐁당",
-    "score": 195
+    "name": "무명",
+    "role": "장로",
+    "total_score": 84403968
   },
   {
     "rank": 15,
     "name": "희크리",
-    "score": 183
+    "role": "장로",
+    "total_score": 82378458
   },
   {
     "rank": 16,
-    "name": "시간부자무직백수",
-    "score": 180
+    "name": "먼지야",
+    "role": "장로",
+    "total_score": 75148908
   },
   {
     "rank": 17,
-    "name": "우리집왕떡이",
-    "score": 179
+    "name": "행복한곰이",
+    "role": "장로",
+    "total_score": 73879834
   },
   {
     "rank": 18,
-    "name": "미동",
-    "score": 175
+    "name": "감자깡",
+    "role": "장로",
+    "total_score": 72399892
   },
   {
     "rank": 19,
-    "name": "유진공주",
-    "score": 164
+    "name": "닝곰",
+    "role": "장로",
+    "total_score": 72316293
   },
   {
     "rank": 20,
-    "name": "큐밍",
-    "score": 162
+    "name": "riguleto",
+    "role": "장로",
+    "total_score": 70974628
   },
   {
     "rank": 21,
-    "name": "비둘기님",
-    "score": 159
+    "name": "우당탕탕",
+    "role": "장로",
+    "total_score": 65106661
   },
   {
     "rank": 22,
-    "name": "경자",
-    "score": 156
+    "name": "비누칠",
+    "role": "클랜원",
+    "total_score": 63523759
   },
   {
     "rank": 23,
-    "name": "클라우드",
-    "score": 156
+    "name": "예슬쿵야",
+    "role": "장로",
+    "total_score": 63252888
   },
   {
     "rank": 24,
-    "name": "도라지공주",
-    "score": 146
+    "name": "백현",
+    "role": "장로",
+    "total_score": 63118882
   },
   {
     "rank": 25,
-    "name": "졔타몽",
-    "score": 144
+    "name": "클라우드",
+    "role": "장로",
+    "total_score": 60688826
   },
   {
     "rank": 26,
-    "name": "전애옹이다옹",
-    "score": 138
+    "name": "디제이",
+    "role": "장로",
+    "total_score": 60131166
   },
   {
     "rank": 27,
-    "name": "조니",
-    "score": 133
+    "name": "치즈",
+    "role": "장로",
+    "total_score": 59303754
   },
   {
     "rank": 28,
-    "name": "타기",
-    "score": 132
+    "name": "고양이랑",
+    "role": "장로",
+    "total_score": 57349808
   },
   {
     "rank": 29,
-    "name": "밤양갱",
-    "score": 131
+    "name": "핑퐁당",
+    "role": "장로",
+    "total_score": 53820944
   },
   {
     "rank": 30,
-    "name": "하눌",
-    "score": 126
+    "name": "밤양갱",
+    "role": "장로",
+    "total_score": 53205295
   },
   {
     "rank": 31,
-    "name": "먼지야",
-    "score": 124
+    "name": "큐밍",
+    "role": "장로",
+    "total_score": 50042445
   },
   {
     "rank": 32,
-    "name": "초코칩쿠키",
-    "score": 124
+    "name": "유진공주",
+    "role": "장로",
+    "total_score": 49225384
   },
   {
     "rank": 33,
-    "name": "치즈",
-    "score": 124
+    "name": "전애옹이다옹",
+    "role": "장로",
+    "total_score": 45390123
   },
   {
     "rank": 34,
-    "name": "riguleto",
-    "score": 123
+    "name": "조니",
+    "role": "장로",
+    "total_score": 44688942
   },
   {
     "rank": 35,
-    "name": "나무",
-    "score": 121
+    "name": "리틀띰",
+    "role": "장로",
+    "total_score": 38336778
   },
   {
     "rank": 36,
-    "name": "고짱이",
-    "score": 120
+    "name": "티티나나",
+    "role": "장로",
+    "total_score": 35294725
   },
   {
     "rank": 37,
-    "name": "행복한곰이",
-    "score": 119
+    "name": "경자",
+    "role": "장로",
+    "total_score": 32399690
   },
   {
     "rank": 38,
-    "name": "티티나나",
-    "score": 116
+    "name": "하눌",
+    "role": "장로",
+    "total_score": 31789451
   },
   {
     "rank": 39,
-    "name": "닝곰",
-    "score": 115
+    "name": "고짱이",
+    "role": "장로",
+    "total_score": 31478979
   },
   {
     "rank": 40,
-    "name": "문짱이",
-    "score": 112
+    "name": "타기",
+    "role": "장로",
+    "total_score": 31123092
   },
   {
     "rank": 41,
-    "name": "보라너굴",
-    "score": 110
+    "name": "오농농",
+    "role": "클랜원",
+    "total_score": 29211058
   },
   {
     "rank": 42,
-    "name": "리틀띰",
-    "score": 104
+    "name": "보라너굴",
+    "role": "장로",
+    "total_score": 29207513
   },
   {
     "rank": 43,
-    "name": "슈퍼샤이",
-    "score": 103
+    "name": "252",
+    "role": "클랜원",
+    "total_score": 28653992
   },
   {
     "rank": 44,
-    "name": "빌런즈",
-    "score": 102
+    "name": "나무",
+    "role": "장로",
+    "total_score": 27466806
   },
   {
     "rank": 45,
-    "name": "오농농",
-    "score": 95
+    "name": "초코칩쿠키",
+    "role": "장로",
+    "total_score": 27096104
   },
   {
     "rank": 46,
-    "name": "아르미아",
-    "score": 63
+    "name": "슈퍼샤이",
+    "role": "장로",
+    "total_score": 25512209
   },
   {
     "rank": 47,
-    "name": "펭도리",
-    "score": 48
+    "name": "빌런즈",
+    "role": "장로",
+    "total_score": 17177687
   },
   {
     "rank": 48,
-    "name": "비셩이",
-    "score": 48
+    "name": "문짱이",
+    "role": "장로",
+    "total_score": 13712863
   },
   {
     "rank": 49,
-    "name": "252",
-    "score": 21
+    "name": "아르미아",
+    "role": "클랜원",
+    "total_score": 13589909
+  },
+  {
+    "rank": 50,
+    "name": "펭도리",
+    "role": "클랜원",
+    "total_score": 12380770
   }
 ]
