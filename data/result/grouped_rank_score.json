@@ -2,351 +2,344 @@
   {
     "member_id": 1,
     "name": "기무니",
-    "play_count": 16,
-    "rank_score": 795,
+    "play_count": 17,
+    "rank_score": 845,
     "rank": 1
   },
   {
     "member_id": 12,
     "name": "무명",
-    "play_count": 16,
-    "rank_score": 731,
+    "play_count": 17,
+    "rank_score": 777,
     "rank": 2
   },
   {
     "member_id": 3,
     "name": "유디",
-    "play_count": 16,
-    "rank_score": 727,
+    "play_count": 17,
+    "rank_score": 776,
     "rank": 3
   },
   {
     "member_id": 2,
     "name": "주키니콩",
-    "play_count": 15,
-    "rank_score": 708,
+    "play_count": 16,
+    "rank_score": 756,
     "rank": 4
   },
   {
     "member_id": 4,
     "name": "우리집왕떡이",
-    "play_count": 16,
-    "rank_score": 697,
+    "play_count": 17,
+    "rank_score": 744,
     "rank": 5
   },
   {
     "member_id": 5,
     "name": "졔타몽",
-    "play_count": 16,
-    "rank_score": 677,
+    "play_count": 17,
+    "rank_score": 722,
     "rank": 6
   },
   {
     "member_id": 7,
     "name": "시간부자무직백수",
-    "play_count": 16,
-    "rank_score": 665,
+    "play_count": 17,
+    "rank_score": 706,
     "rank": 7
-  },
-  {
-    "member_id": 8,
-    "name": "미동",
-    "play_count": 16,
-    "rank_score": 643,
-    "rank": 8
   },
   {
     "member_id": 9,
     "name": "도라지공주",
-    "play_count": 16,
-    "rank_score": 641,
-    "rank": 9
+    "play_count": 17,
+    "rank_score": 683,
+    "rank": 8
   },
   {
     "member_id": 23,
     "name": "고양이랑",
-    "play_count": 16,
-    "rank_score": 623,
+    "play_count": 17,
+    "rank_score": 666,
+    "rank": 9
+  },
+  {
+    "member_id": 8,
+    "name": "미동",
+    "play_count": 17,
+    "rank_score": 653,
     "rank": 10
   },
   {
     "member_id": 14,
     "name": "고구마깡",
-    "play_count": 16,
-    "rank_score": 613,
+    "play_count": 17,
+    "rank_score": 653,
     "rank": 11
   },
   {
     "member_id": 10,
     "name": "보석리아",
-    "play_count": 15,
-    "rank_score": 567,
+    "play_count": 16,
+    "rank_score": 611,
     "rank": 12
   },
   {
     "member_id": 15,
     "name": "감자깡",
-    "play_count": 16,
-    "rank_score": 545,
+    "play_count": 17,
+    "rank_score": 580,
     "rank": 13
   },
   {
     "member_id": 17,
     "name": "먼지야",
-    "play_count": 16,
-    "rank_score": 528,
+    "play_count": 17,
+    "rank_score": 567,
     "rank": 14
   },
   {
     "member_id": 6,
     "name": "비셩이",
-    "play_count": 14,
-    "rank_score": 527,
+    "play_count": 15,
+    "rank_score": 559,
     "rank": 15
-  },
-  {
-    "member_id": 11,
-    "name": "희크리",
-    "play_count": 16,
-    "rank_score": 502,
-    "rank": 16
   },
   {
     "member_id": 25,
     "name": "백현",
-    "play_count": 16,
-    "rank_score": 501,
+    "play_count": 17,
+    "rank_score": 531,
+    "rank": 16
+  },
+  {
+    "member_id": 11,
+    "name": "희크리",
+    "play_count": 17,
+    "rank_score": 523,
     "rank": 17
   },
   {
     "member_id": 21,
     "name": "예슬쿵야",
-    "play_count": 16,
-    "rank_score": 488,
+    "play_count": 17,
+    "rank_score": 516,
     "rank": 18
   },
   {
     "member_id": 22,
     "name": "디제이",
-    "play_count": 16,
-    "rank_score": 444,
+    "play_count": 17,
+    "rank_score": 477,
     "rank": 19
-  },
-  {
-    "member_id": 29,
-    "name": "치즈",
-    "play_count": 16,
-    "rank_score": 418,
-    "rank": 20
   },
   {
     "member_id": 20,
     "name": "우당탕탕",
-    "play_count": 16,
-    "rank_score": 409,
+    "play_count": 17,
+    "rank_score": 445,
+    "rank": 20
+  },
+  {
+    "member_id": 29,
+    "name": "치즈",
+    "play_count": 17,
+    "rank_score": 438,
     "rank": 21
   },
   {
     "member_id": 16,
     "name": "행복한곰이",
-    "play_count": 14,
-    "rank_score": 384,
+    "play_count": 15,
+    "rank_score": 409,
     "rank": 22
   },
   {
     "member_id": 28,
     "name": "클라우드",
-    "play_count": 13,
-    "rank_score": 357,
+    "play_count": 14,
+    "rank_score": 394,
     "rank": 23
   },
   {
     "member_id": 30,
     "name": "유진공주",
-    "play_count": 14,
-    "rank_score": 351,
+    "play_count": 15,
+    "rank_score": 369,
     "rank": 24
+  },
+  {
+    "member_id": 41,
+    "name": "티티나나",
+    "play_count": 17,
+    "rank_score": 362,
+    "rank": 25
+  },
+  {
+    "member_id": 31,
+    "name": "전애옹이다옹",
+    "play_count": 17,
+    "rank_score": 351,
+    "rank": 26
+  },
+  {
+    "member_id": 26,
+    "name": "밤양갱",
+    "play_count": 17,
+    "rank_score": 340,
+    "rank": 27
   },
   {
     "member_id": 13,
     "name": "충주",
     "play_count": 14,
     "rank_score": 338,
-    "rank": 25
-  },
-  {
-    "member_id": 41,
-    "name": "티티나나",
-    "play_count": 16,
-    "rank_score": 333,
-    "rank": 26
-  },
-  {
-    "member_id": 26,
-    "name": "밤양갱",
-    "play_count": 16,
-    "rank_score": 328,
-    "rank": 27
-  },
-  {
-    "member_id": 31,
-    "name": "전애옹이다옹",
-    "play_count": 16,
-    "rank_score": 327,
     "rank": 28
   },
   {
     "member_id": 38,
     "name": "하눌",
-    "play_count": 16,
-    "rank_score": 306,
+    "play_count": 17,
+    "rank_score": 313,
     "rank": 29
   },
   {
     "member_id": 36,
     "name": "고짱이",
-    "play_count": 16,
-    "rank_score": 281,
+    "play_count": 17,
+    "rank_score": 295,
     "rank": 30
-  },
-  {
-    "member_id": 37,
-    "name": "보라너굴",
-    "play_count": 16,
-    "rank_score": 275,
-    "rank": 31
-  },
-  {
-    "member_id": 32,
-    "name": "리틀띰",
-    "play_count": 15,
-    "rank_score": 273,
-    "rank": 32
   },
   {
     "member_id": 55,
     "name": "핑퐁당",
-    "play_count": 7,
-    "rank_score": 253,
-    "rank": 33
+    "play_count": 8,
+    "rank_score": 291,
+    "rank": 31
+  },
+  {
+    "member_id": 37,
+    "name": "보라너굴",
+    "play_count": 17,
+    "rank_score": 286,
+    "rank": 32
   },
   {
     "member_id": 39,
     "name": "타기",
-    "play_count": 13,
-    "rank_score": 247,
-    "rank": 34
+    "play_count": 14,
+    "rank_score": 264,
+    "rank": 33
   },
   {
     "member_id": 40,
     "name": "초코칩쿠키",
-    "play_count": 16,
-    "rank_score": 238,
-    "rank": 35
+    "play_count": 17,
+    "rank_score": 251,
+    "rank": 34
   },
   {
     "member_id": 54,
     "name": "닝곰",
-    "play_count": 7,
-    "rank_score": 221,
-    "rank": 36
+    "play_count": 8,
+    "rank_score": 247,
+    "rank": 35
   },
   {
     "member_id": 53,
     "name": "riguleto",
-    "play_count": 8,
-    "rank_score": 213,
+    "play_count": 9,
+    "rank_score": 228,
+    "rank": 36
+  },
+  {
+    "member_id": 44,
+    "name": "나무",
+    "play_count": 17,
+    "rank_score": 220,
     "rank": 37
   },
   {
     "member_id": 35,
     "name": "오농농",
-    "play_count": 16,
-    "rank_score": 200,
+    "play_count": 17,
+    "rank_score": 216,
     "rank": 38
-  },
-  {
-    "member_id": 44,
-    "name": "나무",
-    "play_count": 16,
-    "rank_score": 189,
-    "rank": 39
   },
   {
     "member_id": 42,
     "name": "슈퍼샤이",
-    "play_count": 13,
-    "rank_score": 174,
+    "play_count": 14,
+    "rank_score": 193,
+    "rank": 39
+  },
+  {
+    "member_id": 57,
+    "name": "묘연",
+    "play_count": 6,
+    "rank_score": 151,
     "rank": 40
   },
   {
     "member_id": 45,
     "name": "빌런즈",
-    "play_count": 16,
-    "rank_score": 140,
+    "play_count": 17,
+    "rank_score": 144,
     "rank": 41
   },
   {
     "member_id": 48,
     "name": "문짱이",
-    "play_count": 15,
-    "rank_score": 131,
+    "play_count": 16,
+    "rank_score": 137,
     "rank": 42
-  },
-  {
-    "member_id": 57,
-    "name": "묘연",
-    "play_count": 5,
-    "rank_score": 117,
-    "rank": 43
   },
   {
     "member_id": 58,
     "name": "수진",
-    "play_count": 4,
-    "rank_score": 97,
+    "play_count": 5,
+    "rank_score": 120,
+    "rank": 43
+  },
+  {
+    "member_id": 56,
+    "name": "PerFume",
+    "play_count": 6,
+    "rank_score": 103,
     "rank": 44
   },
   {
     "member_id": 46,
     "name": "아르미아",
-    "play_count": 16,
-    "rank_score": 96,
+    "play_count": 17,
+    "rank_score": 99,
     "rank": 45
-  },
-  {
-    "member_id": 56,
-    "name": "PerFume",
-    "play_count": 5,
-    "rank_score": 81,
-    "rank": 46
   },
   {
     "member_id": 49,
     "name": "펭도리",
-    "play_count": 11,
-    "rank_score": 79,
-    "rank": 47
+    "play_count": 12,
+    "rank_score": 84,
+    "rank": 46
   },
   {
     "member_id": 51,
     "name": "조니",
-    "play_count": 9,
-    "rank_score": 76,
+    "play_count": 10,
+    "rank_score": 84,
+    "rank": 47
+  },
+  {
+    "member_id": 61,
+    "name": "모모토리",
+    "play_count": 1,
+    "rank_score": 27,
     "rank": 48
   },
   {
     "member_id": 60,
     "name": "윤ㅇ",
-    "play_count": 1,
-    "rank_score": 16,
+    "play_count": 2,
+    "rank_score": 25,
     "rank": 49
-  },
-  {
-    "member_id": 61,
-    "name": "모모토리",
-    "play_count": 0,
-    "rank_score": 0,
-    "rank": 50
   }
 ]

@@ -48,7 +48,7 @@ def group_by_member_id(df):
 def main():
     # TODO: 중복 코드 제거 및 rank_calculator.py 통합
     # 입력 폴더 및 출력 파일 경로 설정
-    folder_path = '../data/battles_2410'
+    folder_path = '../data/battles_2411'
     output_file_path = '../data/result/monthly_rank_score.json'
 
     # JSON 파일 불러오기
