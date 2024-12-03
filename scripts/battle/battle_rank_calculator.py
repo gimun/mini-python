@@ -207,8 +207,12 @@ def main():
 
     # rank_score 기준으로 내림차순 정렬 및 rank 부여
     final_df = final_df.sort(by='rank_score', descending=True).with_columns(
-        pl.arange(1, final_df.height + 1).alias('rank')
+        pl.col('rank_score')
+        .rank(method='min', descending=True)
+        .cast(pl.Int64)  # 순위를 정수형으로 변환
+        .alias('rank')
     )
+
     logger.info("Sorted DataFrame by 'rank_score' and assigned ranks for final results.")
 
     # 개별 게임별 rank_score를 최종 결과에 병합
