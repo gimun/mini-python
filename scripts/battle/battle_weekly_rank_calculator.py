@@ -75,7 +75,7 @@ def load_recent_json_files(folder_path, pattern, recent_n=3):
 def main():
     # 입력 폴더 및 출력 파일 경로 설정
     folder_path = '../../data/battles_rank'
-    output_final_file_path = '../data/result_battles/grouped_rank_score.json'
+    output_final_file_path = '../data/result_battles/weekly_rank_score.json'
     output_individual_folder = '../data/result_battles/individual_games'
 
     # 개별 게임 결과를 저장할 폴더가 없으면 생성
@@ -83,7 +83,7 @@ def main():
 
     # 최근 3개의 JSON 파일 불러오기
     try:
-        recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=6)
+        recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=3)
         logger.info(f"Loaded {len(recent_files)} recent JSON files from '{folder_path}'.")
     except Exception as e:
         logger.error(f"Failed to load JSON files from '{folder_path}': {e}", exc_info=True)
