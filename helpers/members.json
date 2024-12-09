@@ -34,10 +34,10 @@
     "33": {"name": "경자", "status": 0},
     "34": {"name": "252", "status": 0},
     "35": {"name": "오농농은 야옹", "status": 1},
-    "36": {"name": "고짱이", "status": 1},
+    "36": {"name": "고짱이는 야옹", "status": 1},
     "37": {"name": "보라너굴", "status": 1},
     "38": {"name": "하눌", "status": 1},
-    "39": {"name": "타기", "status": 1},
+    "39": {"name": "타기는 야옹", "status": 1},
     "40": {"name": "초코칩쿠키", "status": 1},
     "41": {"name": "티티나나는 야옹", "status": 1},
     "42": {"name": "슈퍼샤이", "status": 1},
@@ -46,7 +46,7 @@
     "45": {"name": "빌런즈", "status": 1},
     "46": {"name": "아르미아", "status": 1},
     "47": {"name": "저거저거", "status": 0},
-    "48": {"name": "문짱이", "status": 1},
+    "48": {"name": "문짱이는 야옹", "status": 1},
     "49": {"name": "펭도리", "status": 1},
     "50": {"name": "SNFZO", "status": 0},
     "51": {"name": "조니", "status": 1},
@@ -60,5 +60,6 @@
     "59": {"name": "유리짱", "status": 0},
     "60": {"name": "윤ㅇ", "status": 0},
     "61": {"name": "모모토리는 야옹", "status": 1},
-    "62": {"name": "차닝", "status": 1}
+    "62": {"name": "차닝", "status": 1},
+    "63": {"name": "둥이쓰", "status": 1}
 }
