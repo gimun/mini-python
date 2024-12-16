@@ -81,9 +81,9 @@ def main():
     # 개별 게임 결과를 저장할 폴더가 없으면 생성
     os.makedirs(output_individual_folder, exist_ok=True)
 
-    # 최근 3개의 JSON 파일 불러오기
+    # TDDO: recent_n 수정 작업
     try:
-        recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=6)
+        recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=9)
         logger.info(f"Loaded {len(recent_files)} recent JSON files from '{folder_path}'.")
     except Exception as e:
         logger.error(f"Failed to load JSON files from '{folder_path}': {e}", exc_info=True)
