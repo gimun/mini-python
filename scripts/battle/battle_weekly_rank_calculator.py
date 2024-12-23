@@ -63,10 +63,17 @@ def group_by_member_id(df):
 
 def load_recent_json_files(folder_path, pattern, recent_n=3):
     """
-    지정된 폴더에서 JSON 파일을 로드하고, 날짜순으로 정렬 후 최근 n개의 파일을 반환.
+    지정된 폴더에서 JSON 파일을 로드하고, 숫자 부분을 기준으로 정렬 후 최근 n개의 파일을 반환.
     """
     pattern = os.path.join(folder_path, pattern)
-    file_list = sorted(glob.glob(pattern))
+    file_list = glob.glob(pattern)
+
+    # 파일 이름에서 숫자를 추출하여 정렬
+    file_list = sorted(
+        file_list,
+        key=lambda x: int(os.path.splitext(os.path.basename(x))[0].split('_')[-1])
+    )
+
     if len(file_list) < recent_n:
         logger.warning(f"전체 {len(file_list)}개의 파일이 로드되었습니다. 최근 {recent_n}개의 파일만 처리합니다.")
     return file_list[-recent_n:]
