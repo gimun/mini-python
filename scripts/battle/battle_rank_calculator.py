@@ -90,7 +90,7 @@ def main():
 
     # TDDO: recent_n 수정 작업
     try:
-        recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=12)
+        recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=15)
         logger.info(f"Loaded {len(recent_files)} recent JSON files from '{folder_path}'.")
     except Exception as e:
         logger.error(f"Failed to load JSON files from '{folder_path}': {e}", exc_info=True)
