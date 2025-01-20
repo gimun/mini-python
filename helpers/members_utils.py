@@ -19,7 +19,6 @@ class MembersUtils:
 
     @staticmethod
     def initialize():
-        """플러그인 초기화 메서드"""
         logger.debug("members_utils 플러그인이 초기화되었습니다.")
 
     @classmethod
@@ -28,7 +27,6 @@ class MembersUtils:
         JSON 파일에서 멤버 데이터를 읽어와 캐싱 후 반환.
         """
         if cls._members_cache is None:
-            logger.debug("members.json 데이터를 로드 중입니다...")
             cls._members_cache = cls._load_members_from_file()
 
         return cls._members_cache
@@ -41,7 +39,6 @@ class MembersUtils:
         try:
             with open(JSON_FILE_PATH, 'r', encoding='utf-8') as file:
                 members = json.load(file)
-            logger.debug("members.json 데이터가 성공적으로 로드되었습니다.")
             return {int(key): value for key, value in members.items()}  # key를 정수로 변환
         except FileNotFoundError:
             logger.error(f"JSON 파일을 찾을 수 없습니다: {JSON_FILE_PATH}")
@@ -58,17 +55,16 @@ class MembersUtils:
         """
         active_members = MembersUtils.get_active_members()
         active_ids = list(active_members.keys())
-        logger.debug(f"활성 멤버 ID 목록: {active_ids}")
         return active_ids
 
     @staticmethod
+    @register_plugin_method('members_utils')
     def get_active_members():
         """
         상태가 1인 활성 멤버 정보를 반환.
         """
         members = MembersUtils.load_members()
         active_members = {member_id: info for member_id, info in members.items() if info.get('status') == 1}
-        logger.debug(f"활성 멤버 정보: {active_members}")
         return active_members
 
     @staticmethod
@@ -123,7 +119,6 @@ class MembersUtils:
         모든 멤버 정보를 반환.
         """
         members = MembersUtils.load_members()
-        logger.debug(f"전체 멤버 수: {len(members)}")
         return members
 
     @staticmethod

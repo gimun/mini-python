@@ -81,12 +81,10 @@ class PluginLoader:
                 try:
                     method = self.plugin_manager.get_plugin_method(plugin_name, method_name)
                     setattr(plugin_namespace, method_name, method)
-                    logger.info(f"'{plugin_name}'의 '{method_name}' 메서드가 성공적으로 로드되었습니다.")
                 except AttributeError as e:
                     logger.error(f"Failed to load method '{method_name}' from plugin '{plugin_name}': {e}")
 
             setattr(self, plugin_name, plugin_namespace)
-            logger.info(f"'{plugin_name}' 플러그인의 메서드들이 네임스페이스에 할당되었습니다.")
 
             # Debug: Check if methods are assigned correctly
             for method_name in methods:

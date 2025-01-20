@@ -27,8 +27,8 @@ def register_plugin_method(plugin_name: str) -> Callable:
         if func.__name__ not in PLUGIN_METHODS[plugin_name]:
             PLUGIN_METHODS[plugin_name].append(func.__name__)
             logger.debug(f"Method '{func.__name__}' registered for plugin '{plugin_name}'.")
-        else:
-            logger.warning(f"Method '{func.__name__}' is already registered for plugin '{plugin_name}'.")
+        # else:
+        #     logger.warning(f"Method '{func.__name__}' is already registered for plugin '{plugin_name}'.")
 
         return func
 
