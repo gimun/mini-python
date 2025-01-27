@@ -35,9 +35,9 @@ def main():
     if not data:  # 데이터가 없으면 실행 중단
         return
 
-    # 데이터에 id를 할당하고 id 기준으로 정렬
+    # 데이터에 id를 할당후 정렬
     data_with_ids = plugin_loader.members_utils.assign_ids(data, members)
-    sorted_data = sorted(data_with_ids, key=lambda x: x.get('member_id', float('inf')))
+    sorted_data = sorted(data_with_ids, key=lambda x: x.get('rank', float('inf')))
 
     # 결과를 JSON 파일로 저장
     plugin_loader.file_utils.save_single_json(output_file_path, sorted_data)
