@@ -1,302 +1,302 @@
 [
     {
         "rank": 1,
-        "name": "주키니콩",
-        "score": 410406640,
-        "member_id": 2
+        "name": "핑퐁당",
+        "score": 793,
+        "member_id": 55
     },
     {
         "rank": 2,
         "name": "무니는 야옹",
-        "score": 404632926,
+        "score": 760,
         "member_id": 1
     },
     {
         "rank": 3,
-        "name": "유디는 야옹",
-        "score": 297224003,
-        "member_id": 3
-    },
-    {
-        "rank": 4,
-        "name": "차닝",
-        "score": 293100029,
-        "member_id": 62
-    },
-    {
-        "rank": 5,
-        "name": "핑퐁당",
-        "score": 273635094,
-        "member_id": 55
-    },
-    {
-        "rank": 6,
-        "name": "왕떡이는 야옹",
-        "score": 268375624,
-        "member_id": 4
-    },
-    {
-        "rank": 7,
-        "name": "도라지공주",
-        "score": 251029886,
-        "member_id": 9
-    },
-    {
-        "rank": 8,
-        "name": "무명이는 야옹",
-        "score": 231406142,
-        "member_id": 12
-    },
-    {
-        "rank": 9,
-        "name": "보석리아",
-        "score": 228072035,
-        "member_id": 10
-    },
-    {
-        "rank": 10,
-        "name": "닝곰",
-        "score": 227153926,
-        "member_id": 54
-    },
-    {
-        "rank": 11,
-        "name": "코코아",
-        "score": 205874436,
-        "member_id": 64
-    },
-    {
-        "rank": 12,
-        "name": "졔타몽",
-        "score": 203945282,
-        "member_id": 5
-    },
-    {
-        "rank": 13,
-        "name": "비셩이는 야옹",
-        "score": 198008867,
-        "member_id": 6
-    },
-    {
-        "rank": 14,
         "name": "시간부자무직백수",
-        "score": 188146580,
+        "score": 729,
         "member_id": 7
     },
     {
-        "rank": 15,
-        "name": "고구마깡",
-        "score": 176708412,
-        "member_id": 14
+        "rank": 4,
+        "name": "무명이는 야옹",
+        "score": 729,
+        "member_id": 12
     },
     {
-        "rank": 16,
-        "name": "미동",
-        "score": 161039827,
-        "member_id": 8
-    },
-    {
-        "rank": 17,
-        "name": "≈...≈",
-        "score": 152186827,
-        "member_id": 13
-    },
-    {
-        "rank": 18,
-        "name": "클라우드",
-        "score": 132765245,
-        "member_id": 28
-    },
-    {
-        "rank": 19,
-        "name": "riguleto",
-        "score": 120848641,
-        "member_id": 53
-    },
-    {
-        "rank": 20,
-        "name": "먼지야",
-        "score": 118636208,
-        "member_id": 17
-    },
-    {
-        "rank": 21,
+        "rank": 5,
         "name": "백현",
-        "score": 117555224,
+        "score": 659,
         "member_id": 25
     },
     {
+        "rank": 6,
+        "name": "주키니콩",
+        "score": 622,
+        "member_id": 2
+    },
+    {
+        "rank": 7,
+        "name": "고양이랑",
+        "score": 598,
+        "member_id": 23
+    },
+    {
+        "rank": 8,
+        "name": "유디는 야옹",
+        "score": 595,
+        "member_id": 3
+    },
+    {
+        "rank": 9,
+        "name": "미동",
+        "score": 577,
+        "member_id": 8
+    },
+    {
+        "rank": 10,
+        "name": "고구마깡",
+        "score": 571,
+        "member_id": 14
+    },
+    {
+        "rank": 11,
+        "name": "보석리아",
+        "score": 486,
+        "member_id": 10
+    },
+    {
+        "rank": 12,
+        "name": "비셩이는 야옹",
+        "score": 478,
+        "member_id": 6
+    },
+    {
+        "rank": 13,
+        "name": "쿵야는 야옹",
+        "score": 472,
+        "member_id": 21
+    },
+    {
+        "rank": 14,
+        "name": "묘연",
+        "score": 469,
+        "member_id": 57
+    },
+    {
+        "rank": 15,
+        "name": "디제이",
+        "score": 465,
+        "member_id": 22
+    },
+    {
+        "rank": 16,
+        "name": "졔타몽",
+        "score": 461,
+        "member_id": 5
+    },
+    {
+        "rank": 17,
+        "name": "희크리",
+        "score": 447,
+        "member_id": 11
+    },
+    {
+        "rank": 18,
+        "name": "코코아",
+        "score": 421,
+        "member_id": 64
+    },
+    {
+        "rank": 19,
+        "name": "먼지야",
+        "score": 419,
+        "member_id": 17
+    },
+    {
+        "rank": 20,
+        "name": "클라우드",
+        "score": 411,
+        "member_id": 28
+    },
+    {
+        "rank": 21,
+        "name": "나무는 야옹",
+        "score": 400,
+        "member_id": 44
+    },
+    {
         "rank": 22,
-        "name": "행복한곰이는 야옹",
-        "score": 117542288,
-        "member_id": 16
+        "name": "왕떡이는 야옹",
+        "score": 386,
+        "member_id": 4
     },
     {
         "rank": 23,
-        "name": "PerFume",
-        "score": 114779998,
-        "member_id": 56
+        "name": "당탕이는 야옹",
+        "score": 374,
+        "member_id": 20
     },
     {
         "rank": 24,
         "name": "감자깡",
-        "score": 114437461,
+        "score": 334,
         "member_id": 15
     },
     {
         "rank": 25,
-        "name": "디제이",
-        "score": 111005635,
-        "member_id": 22
-    },
-    {
-        "rank": 26,
-        "name": "당탕이는 야옹",
-        "score": 109493600,
-        "member_id": 20
-    },
-    {
-        "rank": 27,
-        "name": "희크리",
-        "score": 109316528,
-        "member_id": 11
-    },
-    {
-        "rank": 28,
-        "name": "묘연",
-        "score": 109242002,
-        "member_id": 57
-    },
-    {
-        "rank": 29,
-        "name": "쿵야는 야옹",
-        "score": 108751279,
-        "member_id": 21
-    },
-    {
-        "rank": 30,
-        "name": "모모토리는 야옹",
-        "score": 105453170,
-        "member_id": 61
-    },
-    {
-        "rank": 31,
-        "name": "고짱이는 야옹",
-        "score": 104238994,
-        "member_id": 36
-    },
-    {
-        "rank": 32,
-        "name": "치즈는 야옹",
-        "score": 104123463,
-        "member_id": 29
-    },
-    {
-        "rank": 33,
-        "name": "고양이랑",
-        "score": 103867242,
-        "member_id": 23
-    },
-    {
-        "rank": 34,
-        "name": "티티나나는 야옹",
-        "score": 101403549,
-        "member_id": 41
-    },
-    {
-        "rank": 35,
-        "name": "윤쫑쫑",
-        "score": 99881341,
-        "member_id": 66
-    },
-    {
-        "rank": 36,
-        "name": "밤양갱",
-        "score": 81807805,
-        "member_id": 26
-    },
-    {
-        "rank": 37,
-        "name": "나무는 야옹",
-        "score": 80513081,
-        "member_id": 44
-    },
-    {
-        "rank": 38,
         "name": "수진",
-        "score": 79656188,
+        "score": 333,
         "member_id": 58
     },
     {
-        "rank": 39,
+        "rank": 26,
+        "name": "모모토리는 야옹",
+        "score": 325,
+        "member_id": 61
+    },
+    {
+        "rank": 27,
+        "name": "티티나나는 야옹",
+        "score": 320,
+        "member_id": 41
+    },
+    {
+        "rank": 28,
+        "name": "도라지공주",
+        "score": 313,
+        "member_id": 9
+    },
+    {
+        "rank": 29,
+        "name": "듕이쓰",
+        "score": 311,
+        "member_id": 63
+    },
+    {
+        "rank": 30,
+        "name": "≈...≈",
+        "score": 294,
+        "member_id": 13
+    },
+    {
+        "rank": 31,
         "name": "유진공주",
-        "score": 73428806,
+        "score": 281,
         "member_id": 30
     },
     {
-        "rank": 40,
-        "name": "전애옹이다옹",
-        "score": 65472539,
-        "member_id": 31
+        "rank": 32,
+        "name": "밤양갱",
+        "score": 257,
+        "member_id": 26
     },
     {
-        "rank": 41,
-        "name": "초코칩쿠키",
-        "score": 61633340,
-        "member_id": 40
-    },
-    {
-        "rank": 42,
-        "name": "조니",
-        "score": 61088430,
-        "member_id": 51
-    },
-    {
-        "rank": 43,
+        "rank": 33,
         "name": "치즈",
-        "score": 60354504,
+        "score": 255,
         "member_id": 65
     },
     {
-        "rank": 44,
+        "rank": 34,
+        "name": "치즈는 야옹",
+        "score": 254,
+        "member_id": 29
+    },
+    {
+        "rank": 35,
         "name": "하눌",
-        "score": 60314365,
+        "score": 250,
         "member_id": 38
     },
     {
-        "rank": 45,
+        "rank": 36,
+        "name": "조니",
+        "score": 249,
+        "member_id": 51
+    },
+    {
+        "rank": 37,
         "name": "보라너굴",
-        "score": 59754919,
+        "score": 239,
         "member_id": 37
     },
     {
-        "rank": 46,
+        "rank": 38,
+        "name": "bashumet",
+        "score": 215,
+        "member_id": 53
+    },
+    {
+        "rank": 39,
         "name": "타기는 야옹",
-        "score": 57086803,
+        "score": 207,
         "member_id": 39
     },
     {
-        "rank": 47,
+        "rank": 40,
+        "name": "고짱이는 야옹",
+        "score": 202,
+        "member_id": 36
+    },
+    {
+        "rank": 41,
+        "name": "윤쫑쫑",
+        "score": 200,
+        "member_id": 66
+    },
+    {
+        "rank": 42,
+        "name": "PerFume",
+        "score": 193,
+        "member_id": 56
+    },
+    {
+        "rank": 43,
+        "name": "빌런즈",
+        "score": 189,
+        "member_id": 45
+    },
+    {
+        "rank": 44,
+        "name": "행복한곰이는 야옹",
+        "score": 180,
+        "member_id": 16
+    },
+    {
+        "rank": 45,
         "name": "문짱이는 야옹",
-        "score": 54718262,
+        "score": 178,
         "member_id": 48
     },
     {
+        "rank": 46,
+        "name": "차닝",
+        "score": 178,
+        "member_id": 62
+    },
+    {
+        "rank": 47,
+        "name": "초코칩쿠키",
+        "score": 172,
+        "member_id": 40
+    },
+    {
         "rank": 48,
-        "name": "듕이쓰",
-        "score": 54207625,
-        "member_id": 63
+        "name": "닝곰",
+        "score": 165,
+        "member_id": 54
     },
     {
         "rank": 49,
         "name": "오농농은 야옹",
-        "score": 52678702,
+        "score": 160,
         "member_id": 35
     },
     {
         "rank": 50,
-        "name": "빌런즈",
-        "score": 31938251,
-        "member_id": 45
+        "name": "전애옹이다옹",
+        "score": 151,
+        "member_id": 31
     }
 ]

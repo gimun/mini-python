@@ -1,12 +1,13 @@
 # scripts/battle/rank_calculator.py
 
+import glob
+import json
 import logging
 import os
 import sys
+
 import polars as pl
-from datetime import datetime
-import glob
-import json
+
 from scripts.plugin_loader import PluginLoader
 
 # 현재 스크립트의 상위 두 경로를 추가하여 plugin_loader.py 파일을 불러옴
@@ -30,26 +31,47 @@ def ensure_column_exists(df, column_name, default_value):
 def calculate_rank_score(df):
     """
     rank_score 계산:
-    - 1등: 50점
-    - 2등: 49점
-    - ...
-    - 50등: 1점
-    - 51등 이상: 0점
+    - 게임 미참여자는 고정적으로 rank=51, rank_score=0을 부여.
+    - 동일한 score는 동일한 rank를 부여.
+    - 동점자가 있으면 다음 순위를 건너뛰도록 처리.
+    - 1등: 50점, 2등: 49점, ... 50등: 1점, 이후 0점.
     """
-    return df.with_columns(
-        pl.when(pl.col('rank') <= 50).then(51 - pl.col('rank')).otherwise(0).alias('rank_score')
+    # score가 null인 경우 0으로 설정 (순위 계산을 위해 필요)
+    df = df.with_columns(pl.col("score").fill_null(0))
+
+    # score > 0인 경우에만 rank 부여, 그렇지 않으면 51위 고정
+    df = df.with_columns(
+        pl.when(pl.col("score") > 0)
+        .then(pl.col("score").rank(method="min", descending=True).cast(pl.Int64))
+        .otherwise(51)  # 미참여자는 51위 고정
+        .alias("rank")
     )
+
+    # 순위별 점수 부여 (1등: 50점, 2등: 49점, ..., 50등: 1점, 이후 0점)
+    rank_to_score = {rank: max(51 - rank, 0) for rank in df["rank"].unique().to_list()}
+
+    # rank_score 계산 (게임 미참여자는 0점으로 설정)
+    df = df.with_columns(
+        pl.when(pl.col("rank") <= 50)
+        .then(pl.col("rank").map_elements(lambda r: rank_to_score.get(r, 0), return_dtype=pl.Int64))
+        .otherwise(0)  # 51위는 0점
+        .alias("rank_score")
+    )
+
+    return df
 
 
 def update_play_count(df):
     """
     play_count 갱신:
-    - rank_score가 0보다 클 경우 play_count를 1 증가
-    - 그렇지 않으면 play_count는 그대로 유지
+    - rank_score가 0보다 크면 play_count + 1
+    - 그렇지 않으면 play_count 그대로 유지
     """
     return df.with_columns(
-        pl.when(pl.col('rank_score') > 0).then(pl.col('play_count') + 1)
-        .otherwise(pl.col('play_count')).alias('play_count')
+        pl.when(pl.col("rank_score") > 0)
+        .then(pl.col("play_count") + 1)
+        .otherwise(pl.col("play_count"))
+        .alias("play_count")
     )
 
 
@@ -88,7 +110,7 @@ def main():
     # 개별 게임 결과를 저장할 폴더가 없으면 생성
     os.makedirs(output_individual_folder, exist_ok=True)
 
-    # 최근 3개의 JSON 파일 불러오기
+    # TDDO: recent_n 수정 작업
     try:
         recent_files = load_recent_json_files(folder_path, 'battle_*.json', recent_n=3)
         logger.info(f"Loaded {len(recent_files)} recent JSON files from '{folder_path}'.")
@@ -104,7 +126,6 @@ def main():
     try:
         active_member_ids = plugin_loader.members_utils.get_active_member_ids()
         active_members_df = plugin_loader.members_utils.load_active_members_as_df()
-        logger.info("Loaded active member IDs and DataFrame.")
     except Exception as e:
         logger.error(f"Failed to load active member information: {e}", exc_info=True)
         return
@@ -130,54 +151,56 @@ def main():
 
         # 데이터를 Polars DataFrame으로 변환
         game_df = pl.DataFrame(data)
-        logger.info(f"Converted data from '{file_path}' to Polars DataFrame.")
+        if game_df.is_empty():
+            logger.warning(f"Empty DataFrame for '{file_path}'. Skipping.")
+            continue
 
         # play_count 열이 존재하지 않으면 기본 값 0으로 설정
         game_df = ensure_column_exists(game_df, 'play_count', 0)
-        logger.info(f"Ensured 'play_count' column exists in DataFrame from '{file_path}'.")
 
         # active_member_ids 필터링
         game_df = game_df.filter(pl.col('member_id').is_in(active_member_ids))
-        logger.info(f"Filtered DataFrame to include only active members for '{file_path}'.")
 
-        # rank_score 계산
+        if game_df.is_empty():
+            logger.warning(f"All members filtered out for '{file_path}'. Skipping.")
+            continue
+
         game_df = calculate_rank_score(game_df)
-        logger.info(f"Calculated 'rank_score' for '{file_path}'.")
 
         # play_count 갱신
         game_df = update_play_count(game_df)
-        logger.info(f"Updated 'play_count' for '{file_path}'.")
 
         # member_id 별로 그룹화하여 rank_score와 play_count의 합계 계산
         grouped_game_df = group_by_member_id(game_df)
-        logger.info(f"Grouped DataFrame by 'member_id' and aggregated 'rank_score' and 'play_count' for '{file_path}'.")
 
-        # 랭킹 데이터와 활성 멤버 정보 join
-        final_game_df = active_members_df.join(grouped_game_df, on='member_id', how='left')
-        logger.info(f"Joined aggregated data with active members DataFrame for '{file_path}'.")
-
-        # rank_score와 play_count가 없거나 NaN인 경우 0으로 설정
-        final_game_df = final_game_df.with_columns(
+        # 개별 게임 결과를 저장할 DataFrame 준비 (한 번에 join 수행)
+        final_game_df = active_members_df.join(
+            grouped_game_df.join(game_df.select(['member_id', 'rank', 'score']), on='member_id', how='left'),
+            on='member_id',
+            how='left'
+        ).with_columns(
+            pl.col('rank').fill_null(51),
+            pl.col('score').fill_null(0),
             pl.col('play_count').fill_null(0),
             pl.col('rank_score').fill_null(0)
-        )
-        logger.info(f"Filled null values in 'play_count' and 'rank_score' with 0 for '{file_path}'.")
+        ).sort('rank')
 
-        # 결과를 JSON 파일로 저장 (개별 게임 결과)
         try:
             # 게임별 파일명 생성 (예: game_1_rank_score.json)
             individual_game_file = os.path.join(output_individual_folder, f'game_{idx}_rank_score.json')
+
+            # rank와 score도 포함하여 저장
             plugin_loader.file_utils.save_to_json(individual_game_file, final_game_df)
-            logger.info(f"Saved individual game DataFrame to '{individual_game_file}'.")
+            logger.info(f"Saved individual game DataFrame with rank and score to '{individual_game_file}'.")
         except Exception as e:
             logger.error(f"Failed to save individual game DataFrame to '{individual_game_file}': {e}", exc_info=True)
 
-        # 개별 게임 DataFrame을 리스트에 추가
         individual_game_dfs.append(final_game_df)
 
-        # 개별 게임의 rank_score를 저장할 데이터프레임 준비
-        game_rank_score_df = final_game_df.select(['member_id', 'rank_score']).rename({
-            'rank_score': f'game_{idx}_rank_score'
+        game_rank_score_df = final_game_df.select(['member_id', 'rank', 'score', 'rank_score']).rename({
+            'rank_score': f'game_{idx}_rank_score',
+            'rank': f'game_{idx}_rank',
+            'score': f'game_{idx}_score'
         })
         individual_game_rank_scores.append(game_rank_score_df)
 
@@ -210,7 +233,6 @@ def main():
         pl.col('play_count').fill_null(0),
         pl.col('rank_score').fill_null(0)
     )
-    logger.info("Filled null values in 'play_count' and 'rank_score' with 0 for final results.")
 
     # rank_score 기준으로 내림차순 정렬 및 rank 부여
     final_df = final_df.sort(by='rank_score', descending=True).with_columns(
@@ -220,12 +242,9 @@ def main():
         .alias('rank')
     )
 
-    logger.info("Sorted DataFrame by 'rank_score' and assigned ranks for final results.")
-
     # 개별 게임별 rank_score를 최종 결과에 병합
     for game_rank_score_df in individual_game_rank_scores:
         final_df = final_df.join(game_rank_score_df, on='member_id', how='left')
-    logger.info("Merged individual game rank scores into final DataFrame.")
 
     # 개별 게임 rank_score가 없거나 NaN인 경우 0으로 설정
     for idx in range(1, len(individual_game_rank_scores) + 1):
@@ -233,7 +252,6 @@ def main():
         final_df = final_df.with_columns(
             pl.col(column_name).fill_null(0)
         )
-    logger.info("Filled null values in individual game rank scores with 0.")
 
     # 최종 결과를 JSON 파일로 저장
     try:
