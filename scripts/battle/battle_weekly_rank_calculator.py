@@ -185,15 +185,15 @@ def main():
             pl.col('rank_score').fill_null(0)
         ).sort('rank')
 
-        try:
-            # 게임별 파일명 생성 (예: game_1_rank_score.json)
-            individual_game_file = os.path.join(output_individual_folder, f'game_{idx}_rank_score.json')
-
-            # rank와 score도 포함하여 저장
-            plugin_loader.file_utils.save_to_json(individual_game_file, final_game_df)
-            logger.info(f"Saved individual game DataFrame with rank and score to '{individual_game_file}'.")
-        except Exception as e:
-            logger.error(f"Failed to save individual game DataFrame to '{individual_game_file}': {e}", exc_info=True)
+        # try:
+        #     # 게임별 파일명 생성 (예: game_1_rank_score.json)
+        #     individual_game_file = os.path.join(output_individual_folder, f'game_{idx}_rank_score.json')
+        #
+        #     # rank와 score도 포함하여 저장
+        #     plugin_loader.file_utils.save_to_json(individual_game_file, final_game_df)
+        #     logger.info(f"Saved individual game DataFrame with rank and score to '{individual_game_file}'.")
+        # except Exception as e:
+        #     logger.error(f"Failed to save individual game DataFrame to '{individual_game_file}': {e}", exc_info=True)
 
         individual_game_dfs.append(final_game_df)
 
@@ -204,9 +204,9 @@ def main():
         })
         individual_game_rank_scores.append(game_rank_score_df)
 
-    if not individual_game_dfs:
-        logger.error("No individual game data processed. Exiting.")
-        return
+    # if not individual_game_dfs:
+    #     logger.error("No individual game data processed. Exiting.")
+    #     return
 
     # 모든 개별 게임 DataFrame을 합산
     try:
